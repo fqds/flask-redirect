@@ -1,0 +1,13 @@
+[Unit]
+Description=flask-redirect
+After=multi-user.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /root/flask-redirect/main.py
+
+[Install]
+WantedBy=multi-user.target
